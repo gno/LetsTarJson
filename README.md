@@ -1,4 +1,4 @@
-JSON tar. 
+Lets Tar (and feather) JSON. 
 
 I've Been getting intimate with daemontools as of late. The part of
 djb's mental model that's left the greatest impression on me is the
