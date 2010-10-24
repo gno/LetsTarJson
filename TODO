@@ -1,0 +1,7 @@
+Make it not a hack?
+
+- usage statement
+- man page
+- more consistent error handling.
+- import libarchive, round trip to/from tar?
+
