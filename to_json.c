@@ -1,4 +1,4 @@
-/* Copyright 2010 Greg Olszewski, all rights reserved 
+/* Copyleft 2010 Greg Olszewski, all wrongs reserved 
    gno@8kb.net
    650 castro st ste 120 box 215 mountain view,ca 94041
 

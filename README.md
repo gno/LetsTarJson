@@ -1,23 +1,32 @@
 JSON tar. 
 
-Been getting intimate with daemontools as of late. The part of djb's
-mental model that's left the greatest impression on me is the
+I've Been getting intimate with daemontools as of late. The part of
+djb's mental model that's left the greatest impression on me is the
 treatment of directories as key value stores. 
 
-json_to_tar.c reads an json value (which must be an object) and
-serializes it in tar format. 
+Also, I'm working on a json validator that keeps it's test suite on 
+in files, as portable things like bourne shell handle files well.
 
-to_json.c iterates a directory hierarchy and spits out a json object.
+json_to_tar.c reads a JSON value (which must be an object) and
+spits out a tarball. 
 
-Files containing valid json are wrapped in 1 element arrays, to avoid
-heavyweight escaping.
+to_json.c traverses a directory and spits out a json object.
 
-With the json->tar transformation, GNU's --xform acts as a poor man's jquery. 
+Files containing valid json are marked as such by wrapping them in
+arrays (i.e. arrays are used as literal markers). Other files are
+represented as strings.
 
-json_to_tar < f2.js | gtar tvf --xform s,schema/
+With the json->tar transformation, GNU tar's --xform acts as a poor
+man's jquery.   
+
+json_to_tar < f2.js | gtar tvf --xform s,schema/\(.*\),\1/schema/ --show-transformed-names
 
 You'll need yajl to use this.
 
 Feedback welcome!
+
+gno@8kb.net
+
+bye now.
 
 
